@@ -1,0 +1,510 @@
+/* ===== RESET & TYPO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Lora', serif;
+    color: #444;
+    background: #faf3ed;
+    line-height: 1.6;
+}
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Cinzel', serif;
+    background-color: #fcf6f2; 
+    border-bottom: 1px solid rgba(136, 70, 70, 0.15); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+
+}
+header h1 {
+    font-family: 'Cinzel', serif;
+    color: #884646;
+}
+.liens_header a {
+    margin-left: 25px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px; 
+    transition: color 0.3s ease;
+    color: #884646;
+
+}
+
+.liens_header a:hover {
+    color: #d4a373; 
+    width: 100%;
+  }
+/* ===== BARRE DE RECHERCHE ===== */
+.recherche {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.recherche input,
+.recherche select,
+.recherche button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #f5e1d3;
+}
+.recherche button {
+    background-color: #884646;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+.recherche button:hover {
+    background-color: #f5e1d3;
+    color: #884646;
+}
+
+/* ===== BANNIERE ===== */
+.banner {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.banner h2 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: 'Cinzel', serif; 
+    font-size: 2.5rem; 
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+    background: linear-gradient(to right,#884646 , #d4a373);/*pour appliquer le dégrader sur le texte*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.banner .btn {
+    background: #f5e1d3;
+    border: 1px solid #884646;
+    color: #884646;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    transition: all 0.4s ease;
+}
+
+.banner .btn:hover {
+    background: #884646;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(136, 70, 70, 0.3);
+}
+/* ===== CATÉGORIES ===== */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.categorie {
+    text-align: center;
+    padding: 15px;
+    background-color: #f5e1d3;
+    border-radius: 10px;
+    width: 120px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.categorie img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.categorie:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== PRODUITS ===== */
+
+.produits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+.produit {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+
+}
+
+.produit:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.produit img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.produit:hover img {
+  transform: scale(1.05);
+}
+
+.produit h3 {
+  margin: 10px 0;
+  color: #884646;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.produit p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.produit strong {
+  color: #884646;
+  font-size: 1.1rem;
+}
+
+
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #884646;
+    font-family: 'Cinzel', serif;
+    background-color: #fcf6f2; 
+    border-bottom: 1px solid rgba(136, 70, 70, 0.15); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+
+}
+main {
+    flex: 1;
+}
+/* ===== BOUTON ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #884646;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.btn:hover {
+    background-color: #ebc5ab;
+    color: #884646;
+}
+
+/* ===== AJOUTER AU PANIER ===== */
+form input[type="number"] {
+    width: 60px;
+    text-align: center;
+}
+
+table {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background-color: #884646;
+  color: #fff;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #f5e1d3;
+}
+
+.btn-supprimer {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+td form {
+   background: transparent;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+
+}
+.btn-supprimer:hover {
+  background-color: #c9302c;
+}
+.cnx{
+  text-align: center;
+
+}
+.total {
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.panier-vide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.main-admin {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.admin-actions {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center;
+    gap: 15px; 
+    width: 100%;
+    margin-top: 20px;
+}
+
+.admin-actions .btn {
+    display: block !important;
+    width: 300px !important; 
+    margin: 0 auto !important; 
+    padding: 15px;
+}
+
+/*==========gerer utilisateurs======*/
+.table-users { width:100%; border-collapse: collapse; margin-top:20px; }
+.table-users th, .table-users td {  border:1px solid #ddd; padding:10px; text-align:center; }
+.table-users th { background:#884646; color:#fff;}
+.table-users tr:hover { background-color: #f1f1f1; }
+.btn { padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.btn-retour { background-color: #884646; color: #fff; margin-bottom: 15px; display: inline-block; }
+.btn-retour:hover { background-color: #ebc5ab; color: #884646; }
+
+/* ===== Formulaire page gerer utilisateurs ===== */
+form { margin-top:20px; background:#faf3ed; padding:15px; border-radius:10px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+form input { padding:8px; border-radius:5px; border:1px solid #ebc5ab; width:200px; }
+form button { padding:8px 15px; border:none; border-radius:5px; background:#884646; color:#fff; font-weight:bold; cursor:pointer; transition:0.3s; }
+form button:hover { background:#ebc5ab; color:#884646; }
+/* Container principal */
+.contact-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: #884646;
+    font-size: 2rem;
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Grille 2 colonnes */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Style des infos */
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #faf3ed;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  color: #884646;
+}
+
+.info p {
+  font-size: 1rem;
+   font-family: 'Cinzel', serif; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+    background: linear-gradient(to right, #884646, #d4a373);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.contact-info h3, .contact-form h3 {
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    color: #884646;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item strong {
+    display: block;
+    color: #884646;
+    margin-bottom: 5px;
+}
+
+/* Style du formulaire */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/*===========boutton dans boutique===*/
+.btn-ajouter {
+    background-color: #884646;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-ajouter:hover {
+    background-color: #d4a373; 
+}
+
+/* liens dans boutique */
+.liens-bas-page {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.liens-bas-page a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #884646;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.liens-bas-page a:hover {
+    border-bottom: 1px solid #884646;
+}
+.commande {
+  width: 90%;           
+  max-width: 900px;     
+  margin: 30px auto;    
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.commande h3 {
+    font-size: 1rem;
+    color: #884646;
+    border-bottom: 1px solid #f5e1d3;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.table-commande {
+  width: 100%;           
+  border-collapse: collapse;
+  margin-top: 10px;}
+
+.table-commande th {
+background-color: #884646;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table-commande  th, table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
