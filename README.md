@@ -56,4 +56,4 @@ Projet réalisé dans le cadre d'un cours de développement Web.
 
 ## Auteur
 
-Melissa Bali
+Melissa
